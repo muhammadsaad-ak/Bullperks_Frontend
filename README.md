@@ -1,27 +1,42 @@
-# BullperksFrontend
+# BullPerks Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
+## Table of Contents
 
-## Development server
+- [Introduction](#introduction)
+- [Technologies](#technologies)
+- [Setup](#setup)
+  - [Installation](#installation)
+  - [Running the Application](#running-the-application)
+  - [Building for Production](#building-for-production)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Introduction
 
-## Code scaffolding
+This repository contains the frontend codebase for the Bullperks project. The Bullperks Frontend is built using Angular and provides a user interface for interacting with the Bullperks platform, including features such as login, token information display, and token data updates.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies
 
-## Build
+- Angular
+- TypeScript
+- HTML/CSS
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Setup
 
-## Running unit tests
+### Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone this repository to your local machine.
+2. Navigate to the project directory.
+3. Install the necessary dependencies using `npm install`.
 
-## Running end-to-end tests
+### Running the Application
+ng serve
+The application will be accessible at http://localhost:4200.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Usage
+The Bullperks Frontend provides the following functionalities:
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Login: Allows users to authenticate and access their accounts.
+2. Token Information: Displays information about the BLP token, including total supply and circulating supply.
+3. Update Token Data: Allows users to update token data.

@@ -31,8 +31,8 @@ This repository contains the frontend codebase for the Bullperks project. The Bu
 3. Install the necessary dependencies using `npm install`.
 
 ### Running the Application
-ng serve
-The application will be accessible at http://localhost:4200.
+- ng serve
+- The application will be accessible at http://localhost:4200.
 
 ### Usage
 The Bullperks Frontend provides the following functionalities:

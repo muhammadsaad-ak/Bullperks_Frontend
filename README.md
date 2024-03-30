@@ -7,10 +7,7 @@
 - [Setup](#setup)
   - [Installation](#installation)
   - [Running the Application](#running-the-application)
-  - [Building for Production](#building-for-production)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 

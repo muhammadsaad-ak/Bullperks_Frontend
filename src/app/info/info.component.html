@@ -1,0 +1,13 @@
+<div class="container">
+    <h2>Token Information</h2>
+    <div *ngIf="tokenData">
+        <p><strong>Name:</strong> {{ tokenData.name }}</p>
+        <p><strong>Total Supply:</strong> {{ tokenData.totalSupply | number }}</p>
+        <p><strong>Circulating Supply:</strong> {{ tokenData.circulatingSupply | number }}</p>
+    </div>
+    <div *ngIf="!tokenData">
+        <p>No token data available.</p>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

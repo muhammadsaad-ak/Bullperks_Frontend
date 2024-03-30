@@ -1,0 +1,8 @@
+<nav>
+    <ul>
+        <li><a routerLink="/login">Login</a></li>
+        <li><a routerLink="/info">Info</a></li>
+        <li *ngIf="isAuthenticated"><a routerLink="/update">Update</a></li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>

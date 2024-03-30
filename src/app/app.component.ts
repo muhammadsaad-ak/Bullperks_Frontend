@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Bullperks_Frontend';
+  isAuthenticated: boolean = false;
+
+  onAuthenticated(status: boolean): void {
+    this.isAuthenticated = true;
+  }
 }

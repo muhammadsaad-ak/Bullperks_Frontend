@@ -1,0 +1,7 @@
+<div class="container">
+    <h2>Update Token Data</h2>
+    <p>Click the button below to update the token data:</p>
+    <button (click)="updateTokenData()">Update Token Data</button>
+    <div *ngIf="isLoading" class="loader"></div>
+    <div *ngIf="isUpdated" class="alert">Token info updated successfully!</div>
+</div>

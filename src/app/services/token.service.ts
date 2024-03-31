@@ -7,6 +7,7 @@ export interface TokenData {
   name: string;
   totalSupply: number;
   circulatingSupply: number;
+  updatedAt: Date;
 }
 
 

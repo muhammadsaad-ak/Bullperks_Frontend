@@ -8,6 +8,7 @@ import { TokenService, TokenData } from '../services/token.service';
 })
 export class InfoComponent implements OnInit {
   tokenData!: TokenData;
+  loading: boolean = true;
 
   constructor(private tokenService: TokenService) { }
 
@@ -20,8 +21,12 @@ export class InfoComponent implements OnInit {
       next: (data: TokenData) => {
         this.tokenData = data;
         this.formatAmounts();
+        this.loading = false;
       },
-      error: (err: any) => { console.error('Error fetching token data:', err) }
+      error: (err: any) => {
+        console.error('Error fetching token data:', err);
+        this.loading = false;
+      }
     });
   }
 
@@ -32,9 +37,8 @@ export class InfoComponent implements OnInit {
     this.tokenData.circulatingSupply = parseFloat(this.formatWeiAmount(this.tokenData.circulatingSupply));
   }
 
-
   formatWeiAmount(amount: number): string {
-    // Convert amount from wei to ether (1 ether = 10^18 wei)
+    // Convert amount from wei to ether (1 ether = 10^-18 wei)
     const etherAmount = amount / Math.pow(10, 18);
     // Format amount with commas and round to 2 decimal places
     return etherAmount.toLocaleString('en-US', { maximumFractionDigits: 2 });

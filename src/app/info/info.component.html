@@ -1,13 +1,17 @@
 <div class="container">
     <h2>Token Information</h2>
-    <div *ngIf="tokenData">
-        <p><strong>Name:</strong> {{ tokenData.name }}</p>
-        <p><strong>Total Supply:</strong> {{ tokenData.totalSupply | number }}</p>
-        <p><strong>Circulating Supply:</strong> {{ tokenData.circulatingSupply | number }}</p>
+    <div *ngIf="loading; else dataBlock" class="loader">
     </div>
-    <div *ngIf="!tokenData">
-        <p>No token data available.</p>
-    </div>
+    <ng-template #dataBlock>
+        <div *ngIf="tokenData">
+            <p><strong>Name:</strong> {{ tokenData.name }}</p>
+            <p><strong>Total Supply:</strong> {{ tokenData.totalSupply | number }}</p>
+            <p><strong>Circulating Supply:</strong> {{ tokenData.circulatingSupply | number }}</p>
+            <p><strong>Updated At:</strong> {{ tokenData.updatedAt | date: 'medium' }}</p>
+        </div>
+        <div *ngIf="!tokenData">
+            <p>No token data available.</p>
+        </div>
+    </ng-template>
 </div>
-
 <router-outlet></router-outlet>
